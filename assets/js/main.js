@@ -12,19 +12,21 @@ var swiper = new Swiper('.at-swiper__head', {
 });
 // swiper milestone
 var swiper = new Swiper('.at-swiper__milestone', {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    centeredSlides: true,
+    slidesPerView: 'auto',
+    spaceBetween: 30,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
+    navigation: {
+        nextEl: '.at-swiper__button-next',
+        prevEl: '.at-swiper__button-prev',
+    },
 });
 // swiper article kamis
 var swiper = new Swiper('.at-swiper__kamis', {
-    slidesPerView: 3,
-    spaceBetween: 25,
-    freeMode: true,
+    slidesPerView: 'auto',
+    spaceBetween: 30,
 });
 $(document).ready(function () {
     $('.at-slick__head').slick({

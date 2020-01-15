@@ -19,10 +19,7 @@
 					<a href="" class="at-footer__logo">
 						<img src="<?php echo get_template_directory_uri() ?>/assets/img/logo_footer@2x.png" width="118" />
 					</a>
-					<p>
-						&copy; Alterra. All rights reserved except noted. EdX, Open edx and their respective
-						<br/>logos are trademarks or registered trademarks of edX Inc.
-					</p>
+					<?php the_field('footer_description', 'option') ?>
 					<a href="">Kebijakan Privasi</a>
 					<a href="">Ketentuan Layanan</a>
 				</div>
@@ -31,15 +28,12 @@
 				<div class="at-footer__nav">
 					<h5>Alterra</h5>
 					<ul class="at-footer__list list-unstyled clearfix">
+						<?php $nav_footer = get_field('footer_nav', 'option') ?>
+						<?php foreach ($nav_footer as $key => $item_nav): ?>
 						<li>
-							<a href="">About</a>
+							<a href="<?php echo $item_nav['nav']['url']; ?>"><?php echo $item_nav['nav']['title']; ?></a>
 						</li>
-						<li>
-							<a href="">FAQ</a>
-						</li>
-						<li>
-							<a href="">Contact</a>
-						</li>
+						<?php endforeach; ?>
 					</ul>
 				</div>
 			</div>

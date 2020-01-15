@@ -35,16 +35,20 @@
 											<img src="<?php echo get_template_directory_uri() ?>/assets/img/logo_nav@2x.png" width="120" />
 										</a>
 										<ul class="at-navbar__list navbar-nav list-unstyled clearfix">
-											<li><a href="">Why Us</a></li>
-											<li><a href="">Product</a></li>
-											<li><a href="">Our Culture</a></li>
-											<li><a href="">Kamis</a></li>
+											<?php $nav_header = get_field('header_nav', 'option') ?>
+											<?php foreach ($nav_header as $key => $item_nav): ?>
+											<li>
+												<a href="<?php echo $item_nav['header_navbar']['url']; ?>"><?php echo $item_nav['header_navbar']['title']; ?></a>
+											</li>
+											<?php endforeach; ?>
 										</ul>
 									</div>
 								</div>
 								<div class="col-md-3">
 									<div class="at-navbar-button">
-										<a href="" class="btn btn-primary btn-pill">Get in touch</a>
+										<a href="<?php the_field('get_in_touch'); ?>" class="btn btn-primary btn-pill">
+											<?php the_field('link_name_header'); ?>
+										</a>
 									</div>
 								</div>
 							</div>
@@ -57,17 +61,17 @@
 							<div class="col-md-5 order-md-last">
 								<div class="at-header__img">
 									<a href="">
-										<img src="<?php echo get_template_directory_uri() ?>/assets/img/img_header@2x.png" class="full-width" width="405" />
+										<img src="<?php the_field('image_header'); ?>" class="full-width" width="405" />
 									</a>
 								</div>
 							</div>
 							<div class="col-md-7">
 								<div class="at-header__content">
-									<h1>Your Innovative Bill
-										<br />& Payment Solution</h1>
-									<p>We are ready to help your business grow through a wide
-										<br />range of digital bill and payment service. </p>
-									<a href="" class="btn btn-primary btn-pill">Get in touch</a>
+									<h1><?php the_field('title_header'); ?></h1>
+									<?php the_field('description_header'); ?>
+									<a href="<?php the_field('get_in_touch'); ?>" class="btn btn-primary btn-pill">
+										<?php the_field('link_name_header'); ?>
+									</a>
 								</div>
 							</div>
 						</div>
