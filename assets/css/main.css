@@ -211,8 +211,9 @@ a:focus {
 }
 .at-header .at-header__img a {
   position: relative;
-  display: block;
+  display: table;
   text-align: right;
+  margin-left: auto;
 }
 .at-header .at-header__img a:after {
   background-image: url(../img/ic_play@2x.png);
