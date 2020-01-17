@@ -61,8 +61,7 @@
 							<div class="col-md-5 order-md-last">
 								<div class="at-header__img">
 									<a href="" class="<?php echo get_field('video') ? 'js-modal-btn' : '' ?>">
-										<?php print_r (get_field('header_video','option')); ?>
-										<div class="ch-c-modal-vid js-modal-data" data-url="<?php the_field('header_video','option') ?>" data-type="youtube">
+										<div class="ch-c-modal-vid js-modal-data" data-url="dfl" data-type="youtube">
 											<!-- <span class="ch-c-modal-vid__btn"></span> -->
 										</div>
 										<img src="<?php the_field('image_header'); ?>" class="full-width" width="405" />
@@ -83,13 +82,3 @@
 				</header>
 			</div>
 			
-			<!-- The Modal -->
-			<div class="ch-c-modal ch-c-modal--overlay js-modal">
-			<!-- Modal content -->
-				<div class="ch-c-modal__content ch-c-modal__vid--fluid js-modal-content">
-					<div class="ch-modal__wrapper">
-						<iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					</div>
-					<span class="ch-c-modal__close js-modal-close">&times;</span>
-				</div>
-			</div>
