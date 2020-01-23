@@ -43,4 +43,11 @@ $(document).ready(function () {
             eval('alt_love_' + id).play();
         }
     });
+    // js navbar mobile
+    $(".at-navbar-ic").click(function (e) {
+        e.preventDefault();
+        $(".at-navbar--abs").toggleClass("show");
+        $("body").toggleClass("overflow-hidden");
+    });
+    
 });
