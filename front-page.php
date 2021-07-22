@@ -21,7 +21,7 @@ get_header();
 </section>
 <section class="at-section">
 	<div class="container clearfix">
-		<h3 class="at-section-title">Trusted by Indonesia’s Top Tech Companies</h3>
+		<h3 class="at-section-title">Trusted by Indonesia’s Top Tech Companies 1</h3>
 		<div class="at-section__company">
 			<div class="row align-items-md-center">
 				<div class="col-md-6 order-md-last">
